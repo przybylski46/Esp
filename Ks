@@ -371,7 +371,6 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 
     end
-)
 
 local toggleButton = Instance.new("TextButton")
 toggleButton.Parent = game.CoreGui
