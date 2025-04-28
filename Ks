@@ -371,12 +371,11 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 
     end
-)
 
 Section:Item(
     "button",
     "Toggle GUI",
     function()
-        Main.Visible = not Main.Visible
+        Main:Toggle()
     end
 )
