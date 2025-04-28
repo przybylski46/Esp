@@ -371,11 +371,23 @@ Players.PlayerRemoving:Connect(function(player)
 end)
 
     end
+)
 
-Section:Item(
-    "button",
-    "Toggle GUI",
-    function()
+local toggleButton = Instance.new("TextButton")
+toggleButton.Parent = game.CoreGui
+toggleButton.Size = UDim2.new(0, 100, 0, 40)
+toggleButton.Position = UDim2.new(1, -110, 0, 10) -- esquina superior derecha
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.Text = "Toggle GUI"
+toggleButton.BackgroundTransparency = 0.3
+toggleButton.BorderSizePixel = 0
+toggleButton.Font = Enum.Font.SourceSansBold
+toggleButton.TextSize = 20
+
+toggleButton.MouseButton1Click:Connect(function()
+    if Main then
         Main:Toggle()
     end
+end)
 )
